@@ -23,14 +23,38 @@ To get the AI Study Buddy up and running on your local machine, follow these ste
     *(Note: Replace `https://github.com/your-username/study-buddy.git` with the actual repository URL if different.)*
 
 2.  **Configure API Keys:**
-    The application requires API keys for Google Gemini and Unsplash. Detailed instructions are provided in `documentation.txt`.
+    The application requires API keys for Google Gemini and Unsplash.
+
+    *   **Google Gemini API Key:**
+        *   Go to [Google AI Studio](https://makersuite.google.com/keys).
+        *   Create a new API key.
+        *   Open `config.php` in the project's root directory.
+        *   Replace `'YOUR_GEMINI_API_KEY'` with your actual Gemini API key:
+            ```php
+            define('GEMINI_API_KEY', 'YOUR_GEMINI_API_KEY');
+            ```
+
+    *   **Unsplash API Key (Optional, for image feature):**
+        *   Go to [Unsplash Developers](https://unsplash.com/developers).
+        *   Create an account or log in.
+        *   Create a new application to get your **Access Key**.
+        *   Open `config.php` in the project's root directory.
+        *   Replace `'YOUR_UNSPLASH_API_KEY'` with your actual Unsplash Access Key:
+            ```php
+            define('UNSPLASH_API_KEY', 'YOUR_UNSPLASH_API_KEY');
+            ```
 
 3.  **Run the Application:**
-    Detailed instructions on prerequisites and running the application are provided in `documentation.txt`.
 
-## Detailed Documentation
+    *   **Prerequisites:**
+        *   **Web Server:** A web server with PHP support (e.g., Apache, Nginx). XAMPP or MAMP are good options for local development.
+        *   **PHP:** PHP 7.4 or higher.
+        *   **cURL Extension:** Ensure the cURL extension is enabled in your PHP installation.
 
-For a more in-depth understanding of the project's features, technical details, and comprehensive setup instructions, please refer to the `documentation.txt` file in the project root.
+    *   **Steps:**
+        1.  Place the `study-buddy` project folder in your web server's document root (e.g., `htdocs` for Apache/XAMPP).
+        2.  Start your web server.
+        3.  Open your web browser and navigate to the URL where your project is hosted (e.g., `http://localhost/study-buddy`).
 
 ## Technologies Used
 
